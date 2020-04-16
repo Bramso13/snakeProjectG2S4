@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/snake.css">
+</head>
+<body>
+    <div class="page accueil activeEffet">
+        <div class="ui big cards">
+            <div class="card">
+                  <div class="content">
+                    <div class="center aligned header" style="font-size: x-large;">Snake</div>
+                    <div class="ui form">
+                        <hr>
+                        <div class="center aligned grouped fields">
+                            <label for="fruit">Selectionnez un niveau :</label>
+                            <div class="field">
+                              <div class="ui radio checkbox">
+                                <input type="radio" name="nivo" checked="" tabindex="0" class="hidden nivoRadio" id="debutant">
+                                <label>Débutant</label>
+                              </div>
+                            </div>
+                            <div class="field">
+                              <div class="ui radio checkbox">
+                                <input type="radio" name="nivo" tabindex="0" class="hidden nivoRadio" id="inter">
+                                <label>Intermédiaire</label>
+                              </div>
+                            </div>
+                            <div class="field">
+                              <div class="ui radio checkbox">
+                                <input type="radio" name="nivo" tabindex="0" class="hidden nivoRadio" id="pro">
+                                <label>Pro</label>
+                              </div>
+                            </div>
+                            <div class="field">
+                              <div class="ui radio checkbox">
+                                <input type="radio" name="nivo" tabindex="0" class="hidden nivoRadio" id="expert">
+                                <label>Expert</label>
+                              </div>
+                            </div>
+                            <div class="field">
+                                <button class="ui blue button" id="boutonPlay">
+                                    <i class="gamepad icon"></i>
+                                    Jouer !
+                                  </button>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="extra content">
+                    <span class="right floated">
+                      Créé par Brahim
+                    </span>
+                    <span>
+                      IUT LYON 1
+                    </span>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <canvas id="canvasSnake"></canvas>
+    <div id="score">
+      <label for="scoreDirect">Score :</label><h3 id="scoreDirect"></h3>
+    </div>
+    
+  <div style="position: fixed; top: 40%;left: 0; width: 100%; height: 50%;" id="appuie">
+    <h1 style="text-align: center; top: 30%; color: aliceblue;">Appuyez sur</h1>
+    <div class="ui buttons" style="position: relative;left: 43%;">
+      <button class="ui blue icon button"><i class="chevron circle left icon"></i></button>
+      <div class="or" data-text="ou"></div>
+      <button class="ui red icon button"><i class="chevron circle right icon"></i></button>
+      <div class="or" data-text="ou"></div>
+      <button class="ui green icon button"><i class="chevron circle up icon"></i></button>
+      <div class="or" data-text="ou"></div>
+      <button class="ui yellow icon button"><i class="chevron circle down icon"></i></button>
+    </div>
+  </div>
+    <div id="gameover">
+      <div class="ui big cards" id="overCard">
+        <div class="card">
+              <div class="center aligned content">
+                <div class="center aligned header" style="font-size: x-large;">Game Over</div>
+                <label for="">Score :</label><h4 id="h4Score">200</h4>
+                <div class="ui buttons">
+                    <button class="ui blue button" id="butRejouer">Rejouer</button>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+</body>
+<script type='text/javascript' src='js/functionSnake.js'></script>
+<script src="js/snake.js"></script>
+</html>
